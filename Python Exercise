@@ -1,0 +1,72 @@
+numbers = [1,2,3,4,5,6,7,8,9,10]
+for x in numbers:
+    print(x)
+even = []
+odd = []
+
+for x in numbers:
+    if x % 2 == 0:
+        even.append(x)
+
+print(even)
+
+for x in numbers:
+    if x % 2 == 1:
+        odd.append(x)
+
+print(odd)
+
+#1 (b)
+Sum = sum(numbers)
+print(Sum)
+
+Average = Sum/len(numbers)
+print(Average)
+
+Maximum = max(numbers)
+Minimum = min(numbers)
+print("Max is : " , Maximum)
+print("Min is : ", Minimum)
+
+#1(c)
+for x in numbers:
+    if x == 10:
+        print('The element is present')
+
+
+#2
+sampleString = "Count the number of vowels and consonants in a given string."
+vowels = 'aeiouAEIOU'
+consonants = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ'
+
+numberOfVowels = 0
+numberOfConsonants = 0
+
+for char in sampleString:
+    if char in vowels:
+        numberOfVowels += 1
+    if char in consonants:
+        numberOfConsonants += 1
+
+print(numberOfConsonants, numberOfVowels)
+
+text = sampleString[::-1]
+if text == sampleString: 
+    print('The string is a palindrome.')
+
+else:
+    print('The string is not a palindrome.')
+
+students = [{"name": "Sean", "grades": [90, 93, 89]}, {"name": "Darren", "grades": [89, 92, 88]}, {"name": "Evan", "grades": [85, 90, 100]}]
+for student in students:
+    avg = sum(student["grades"]) / len(student["grades"])
+    print(student["name"], avg)
+
+# chat gpt
+highest = 0
+movies = [{"name": "The Dark Knight", "genre": "Action", "rating": [9.3]}, {"name": "Your Name", "genre": "Romance","rating": [8.4]}, {"name": "Forrest Gump", "genre": "Drama","rating": [8.8]}, {"name": "Spider-man: Into the Spider-verse", "genre": "Animation","rating": [8.4]}]
+for movie in movies:
+    if movie['rating'][0] > highest:
+        highest = movie['rating'][0]
+        highestName = movie['name']
+print ("The highest rated movie was: " + str(highestName) + " with a rating of: " + str(highest))
